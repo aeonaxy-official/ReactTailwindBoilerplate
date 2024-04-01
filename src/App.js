@@ -1,10 +1,14 @@
-import DemoComponent from "./DemoComponent";
-
+// import DemoComponent from "./DemoComponent";
+import Landing from "./components/Landing";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div>
-   <DemoComponent />
+      <NavBar />
+      {/* <DemoComponent /> */}
+      <Landing />
+
     </div>
   );
 }

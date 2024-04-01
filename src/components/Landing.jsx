@@ -1,0 +1,137 @@
+import React from "react";
+
+function Landing() {
+  return (
+    <div className="w-full overflow-x-hidden">
+      {/* Heading */}
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="text-5xl font-semibold">Scheduling should be easy.</h1>
+        <h1 className="text-5xl font-semibold my-4 text-blue-600">
+          Start free.
+        </h1>
+      </div>
+      {/* bills + toggle */}
+      <div className="flex gap-4 justify-center items-center">
+        <p>Billed monthly</p>
+        <label class="flex items-center cursor-pointer">
+          <div class="relative">
+            <input type="checkbox" class="hidden" />
+            <div class="toggle-switch w-10 h-5 bg-gray-300 rounded-full shadow-inner transition duration-300 ease-in-out"></div>
+            <div class="dot absolute w-5 h-5 top-0 left-5 bg-blue-600 rounded-full shadow transition duration-300 ease-in-out"></div>
+          </div>
+        </label>
+        <p>Billed annually</p>
+        <p>
+          <span>Save 20%</span> with annual plans
+        </p>
+      </div>
+      {/* Maximixed Cards */}
+      <div className=" w-[100vw] flex justify-around mt-14 px-4">
+        {[
+          {
+            heading: "BAsic",
+            Pricing: "Always Free",
+            details: "When you just want the basics",
+            button: "Get started",
+          },
+          {
+            heading: "Essentials",
+            Pricing: "$8",
+            details: "When you need powerful scheduling automation",
+            button: "Start Essentials",
+          },
+          {
+            heading: "Professional",
+            Pricing: "$12",
+            details:
+              "When you need customization, integration, and basic team features",
+            button: "Start Professional",
+          },
+          {
+            heading: "Teams",
+            Pricing: "$16",
+            details:
+              "When your team needs to align on a scheduling process and collaborate efficiently",
+            button: "Try for free",
+          },
+          {
+            heading: "Enterprise",
+            Pricing: "Contact Us",
+            details:
+              "When your 30+ members team needs advanced security, control, and support",
+            button: "Contact Us",
+          },
+        ].map((card, index) => (
+          <div
+            className={`w-[14vw] h-auto flex flex-col gap-6 py-4 px-6 rounded-md shadow-sm ${
+              index === 4 ? "bg-zinc-600 text-white" : "bg-[#eaeaea]"
+            }`}
+          >
+            <p className=" uppercase text-xl">{card.heading}</p>
+            <p className="text-3xl font-semibold">
+              {card.Pricing}
+              {index !== 0 && index !== 4 && (
+                <span className="text-sm">/seat/mo</span>
+              )}
+            </p>
+            <p>{card.details}</p>
+            <p
+              className={`mt-auto rounded-md  text-center p-2 ${
+                index === 2
+                  ? "text-white bg-blue-600"
+                  : "text-blue-600 border-2 border-blue-600"
+              } ${index === 4 && "text-white border-white"} cursor-pointer`}
+            >
+              {card.button}
+            </p>
+          </div>
+        ))}
+      </div>
+      {/* Minimized Cards */}
+      <div className="flex gap-2 justify-around mt-14">
+        <div className=" w-[20vw] p-4">
+            <p>Features</p>
+            <h2>Features by plan</h2>
+            <p>Find the subscription that makes the most sense for you or your team</p>
+        </div>
+        
+        {[
+          {
+            heading: "BAsic",
+            Pricing: "Free",
+            button: "Sign up",
+          },
+          {
+            heading: "Essentials",
+            Pricing: "$8",
+            button: "Sign up",
+          },
+          {
+            heading: "Professional",
+            Pricing: "$12",
+            button: "Sign up",
+          },
+          {
+            heading: "Teams",
+            Pricing: "$16",
+            button: "Sign up",
+          },
+          {
+            heading: "Enterprise",
+            Pricing: " - ",
+            button: "Contact Sales",
+          },
+        ].map((card, index)=>(
+            <div className="w-[12vw] flex flex-col gap-2 shadow-sm border-2 p-4 ">
+                <p className="text-center capitalize font-semibold">{card.heading}</p>
+                <p className="text-center capitalize font-semibold text-xl">{card.Pricing}</p>
+                <p className={`mt-auto border-2 ${index===2 ? 'text-white bg-blue-600' : 'border-black'} p-1 text-center rounded-md`}>{card.button}</p>
+            </div>
+        ))
+        }
+        </div>
+    </div>
+  );
+}
+
+export default Landing;
