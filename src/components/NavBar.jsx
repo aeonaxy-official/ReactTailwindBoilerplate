@@ -10,13 +10,13 @@ function NavBar() {
         <div className='flex gap-4 items-center'>
             {
                 ["Individuals", "Teams", "Enterprise", "Product", "Pricing", "Resources"].map((item)=>(
-                    <div className='text-lg font-semibold'>{item}</div>
+                    <div className='text-sm font-semibold'>{item}</div>
                 ))
             }
         </div>
         <div className='flex gap-4 items-center'>
-            <p className='text-lg font-semibold'>Log In</p>
-            <p className='p-2  bg-blue-600 rounded-lg'>Get Started</p>
+            <p className='text-sm font-semibold'>Log In</p>
+            <p className='p-2 text-sm bg-blue-600 rounded-lg'>Get Started</p>
         </div>
     </div>
   )

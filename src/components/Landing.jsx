@@ -2,7 +2,7 @@ import React from "react";
 
 function Landing() {
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden my-10">
       {/* Heading */}
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-5xl font-semibold">Scheduling should be easy.</h1>
@@ -21,7 +21,7 @@ function Landing() {
           </div>
         </label>
         <p>Billed annually</p>
-        <p>
+        <p className="bg-[#f3f3f3] p-4 rounded-md">
           <span>Save 20%</span> with annual plans
         </p>
       </div>
@@ -64,9 +64,10 @@ function Landing() {
         ].map((card, index) => (
           <div
             className={`w-[14vw] h-auto flex flex-col gap-6 py-4 px-6 rounded-md shadow-sm ${
-              index === 4 ? "bg-zinc-600 text-white" : "bg-[#eaeaea]"
+              index === 4 ? "bg-[#24477b] text-white" : "bg-[#f3f3f3]"
             }`}
           >
+            {index === 2 && <p className="bg-[#ffffff] text-sm capitalize rounded-md">most popolar</p>}
             <p className=" uppercase text-xl">{card.heading}</p>
             <p className="text-3xl font-semibold">
               {card.Pricing}
@@ -90,9 +91,9 @@ function Landing() {
       {/* Minimized Cards */}
       <div className="flex gap-2 justify-around mt-14">
         <div className=" w-[20vw] p-4">
-            <p>Features</p>
-            <h2>Features by plan</h2>
-            <p>Find the subscription that makes the most sense for you or your team</p>
+            <p className=" uppercase text-xl fonst-semibold">Features</p>
+            <h2 className="text-3xl font-semibold">Features by plan</h2>
+            <p className="text-md">Find the subscription that makes the most sense for you or your team</p>
         </div>
         
         {[
@@ -122,10 +123,10 @@ function Landing() {
             button: "Contact Sales",
           },
         ].map((card, index)=>(
-            <div className="w-[12vw] flex flex-col gap-2 shadow-sm border-2 p-4 ">
+            <div className="w-[12vw] flex flex-col gap-2 shadow-sm border-2 p-4 rounded-md ">
                 <p className="text-center capitalize font-semibold">{card.heading}</p>
                 <p className="text-center capitalize font-semibold text-xl">{card.Pricing}</p>
-                <p className={`mt-auto border-2 ${index===2 ? 'text-white bg-blue-600' : 'border-black'} p-1 text-center rounded-md`}>{card.button}</p>
+                <p className={`mt-auto border-2 ${index===2 ? 'text-white bg-blue-600 border-none' : 'border-black'} p-1 text-center rounded-md cursor-pointer`}>{card.button}</p>
             </div>
         ))
         }
