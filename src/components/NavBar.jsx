@@ -16,7 +16,7 @@ function NavBar() {
         </div>
         <div className='flex gap-4 items-center'>
             <p className='text-sm font-semibold'>Log In</p>
-            <p className='p-2 text-sm bg-blue-600 rounded-lg'>Get Started</p>
+            <p className='p-2 text-sm bg-blue-600 rounded-lg text-white'>Get Started</p>
         </div>
     </div>
   )
