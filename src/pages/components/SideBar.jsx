@@ -11,14 +11,7 @@ import ListItem from './ListItem';
 const SideBar = ({ pageContent: PageContentComponent, darkmode }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 640 });
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const dropdown1Items = [
-    { label: 'Dashboard', link: '#' },
-    { label: 'Settings', link: '#' },
-    { label: 'Earnings', link: '#' },
-    { label: 'Sign out', link: '#' },
-  ];
 
   useEffect(() => {
     // Update body class when darkMode changes
