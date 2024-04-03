@@ -1,0 +1,25 @@
+/* src/styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@media only screen and (max-width: 624px) {
+  .notification {
+    font-size: 0.4rem;
+    gap: 0.4rem;
+  }
+  .notification button {
+    font-size: 0.4rem !important;
+  }
+}
+
+@media only screen and (min-width: 624px) {
+  .notification {
+    font-size: 0.8rem;
+    gap: 4rem !important;
+  }
+  .notification button {
+    font-size: 0.7rem;
+  }
+}
