@@ -6,7 +6,9 @@ import { FiYoutube } from "react-icons/fi";
 
 function Footer() {
   return (
-    <div className='flex gap-8 justify-around my-16 mx-16'>
+    
+    <div className="px-10">
+      <div className='flex gap-8 justify-around my-16 mx-16'>
       {/* Download & Socials */}
         <div className='flex flex-col gap-10 w-[30vw]'>
           <h1 className='text-3xl font-bold'>Easy <br /> <span className='text-blue-600'>ahead</span></h1>
@@ -81,7 +83,13 @@ function Footer() {
             <h1 className='text-3xl font-semibold text-[#323679]'>Developers</h1>
             <p className='text-xl font-light'>Developer Tools</p>
           </div>
+          
         </div>
+          
+    </div>
+      <div className="h-full w-full flex mb-10">
+            <p className="text-zinc-800/50 ml-auto">Privacy / Terms & Conditions </p>
+          </div>
     </div>
   )
 }
