@@ -6,16 +6,19 @@ import Landing from "./components/Landing";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer"
 
+
+import chartData from "./Data";
+
 function App() {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       {/* <DemoComponent /> */}
-      <Landing />
-      <Features />
-      <FAQ />
-      <BlueSection />
-      <Footer />
+      {/* <Landing /> */}
+      <Features chartData={chartData}/>
+      {/* <FAQ /> */}
+      {/* <BlueSection /> */}
+      {/* <Footer /> */}
 
     </div>
   );
