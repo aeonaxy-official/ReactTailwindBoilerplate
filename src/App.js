@@ -1,12 +1,13 @@
 import NotificationBar from "./pages/components/NotificationBar";
 import SideBar from "./pages/components/SideBar"
-
+import Home from "./pages/Home";
+import About from "./pages/About";
 function App() {
   return (
     <div>
    <NotificationBar />
-   <div style={{ marginTop: "250px" }}> {/* Adjust margin-left based on the width of your sidebar */}
-        <SideBar />
+   <div>
+        <Home />
       </div>
     </div>
   );
