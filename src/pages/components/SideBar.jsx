@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faTimes, faSun, faMoon, faGraduationCap, faLock, faBook, faUserPlus, faArchive, faCircleHalfStroke,faBars, faDownload, faQuestion } from '@fortawesome/free-solid-svg-icons';
@@ -19,6 +19,15 @@ const SideBar = ({ pageContent: PageContentComponent, darkmode }) => {
     { label: 'Earnings', link: '#' },
     { label: 'Sign out', link: '#' },
   ];
+
+  useEffect(() => {
+    // Update body class when darkMode changes
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [darkMode]);
   
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -43,7 +52,7 @@ const SideBar = ({ pageContent: PageContentComponent, darkmode }) => {
   return (
     <div>
       <div>
-      <div className={`${darkMode?'bg-black':'bg-white'}`}>
+      <div className={`${darkMode?'bg-gray-900':'bg-white'}`}>
       <button
           data-drawer-target="default-sidebar"
           data-drawer-toggle="default-sidebar"
@@ -134,14 +143,14 @@ const SideBar = ({ pageContent: PageContentComponent, darkmode }) => {
 
       {/* Dark mode toggle button */}
       <button
-        className={`fixed bottom-10 right-3 z-50 p-3  rounded-full w-19 h-15  focus:outline-none text-center {darkMode ? 'bg-black' : 'bg-white'}`}
+        className={`fixed bottom-10 right-3 z-50 p-3  rounded-full w-19 h-15  focus:outline-none text-center`}
         onClick={toggleDarkMode}
       >
         <FontAwesomeIcon icon={darkMode ? faSun : faMoon} className={darkMode ? 'text-white' : 'text-black'} />
       </button>
       <a href='/help'>
       <button
-  className={`fixed bottom-0 right-4 z-50 p-3 rounded-full w-19 h-15 focus:outline-none text-center ${darkMode ? 'bg-black' : 'bg-white'}`}
+  className={`fixed bottom-0 right-4 z-50 p-3 rounded-full w-19 h-15 focus:outline-none text-center `}
   onClick={toggleDarkMode}
 >
   <FontAwesomeIcon icon={faQuestion} className={darkMode ? 'text-white' : 'text-black'} />

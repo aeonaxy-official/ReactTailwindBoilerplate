@@ -28,3 +28,7 @@ body{
     font-size: 0.7rem;
   }
 }
+
+.dark{
+  background-color: rgb(17 24 39)  !important;
+}
