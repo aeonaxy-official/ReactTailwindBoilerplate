@@ -144,7 +144,6 @@ const SideBar = ({ pageContent: PageContentComponent, darkmode }) => {
       <a href='/help'>
       <button
   className={`fixed bottom-0 right-4 z-50 p-3 rounded-full w-19 h-15 focus:outline-none text-center `}
-  onClick={toggleDarkMode}
 >
   <FontAwesomeIcon icon={faQuestion} className={darkMode ? 'text-white' : 'text-black'} />
 </button>
