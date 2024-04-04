@@ -26,7 +26,7 @@ function Landing() {
         </p>
       </div>
       {/* Maximixed Cards */}
-      <div className=" w-[100vw] flex justify-around mt-14 px-4">
+      <div className="overflow-x-scroll w-[100vw] flex justify-around mt-14 px-4">
         {[
           {
             heading: "BAsic",
@@ -64,21 +64,21 @@ function Landing() {
         ].map((card, index) => (
           <div
           key={index}
-            className={`w-[14vw] h-auto flex flex-col gap-6 py-4 px-6 rounded-md shadow-sm ${
+            className={`min-w-[12vw] max-w-[18vw] h-auto flex flex-col gap-6 py-4 px-6 rounded-md shadow-sm ${
               index === 4 ? "bg-[#24477b] text-white" : "bg-[#f3f3f3]"
             }`}
           >
             {index === 2 && <p className="bg-[#ffffff] text-sm capitalize rounded-md  px-2 mr-auto">most popolar</p>}
-            <p className=" uppercase text-xl">{card.heading}</p>
-            <p className="text-3xl font-semibold">
+            <p className=" uppercase text-[2vw]">{card.heading}</p>
+            <p className="text-[3vw] font-semibold">
               {card.Pricing}
               {index !== 0 && index !== 4 && (
-                <span className="text-sm">/seat/mo</span>
+                <span className="text-[1vw]">/seat/mo</span>
               )}
             </p>
-            <p>{card.details}</p>
+            <p className="text-[1vw] mt-auto">{card.details}</p>
             <p
-              className={`mt-auto rounded-md  text-center p-2 ${
+              className={`mt-auto rounded-md  text-center p-2  text-[1.2vw] ${
                 index === 2
                   ? "text-white bg-blue-600"
                   : "text-blue-600 border-2 border-blue-600"

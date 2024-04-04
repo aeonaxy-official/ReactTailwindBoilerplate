@@ -2,7 +2,7 @@ import React from 'react'
 
 function NavBar() {
   return (
-    <div className=' w-full flex justify-around p-6 '>
+    <div className='hidden w-full lg:flex justify-around p-6 lg:text-zinc-400 '>
         <div className='flex items-center'>
             {/* LOGO GOES HERE */}
             <p>Calendly</p>

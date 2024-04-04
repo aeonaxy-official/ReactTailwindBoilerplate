@@ -7,10 +7,10 @@ import { FiYoutube } from "react-icons/fi";
 function Footer() {
   return (
     
-    <div className="px-10">
-      <div className='flex gap-8 justify-around my-16 mx-16'>
+    <div className="lg:px-10 px-4">
+      <div className='lg:flex gap-8 justify-around my-16 lg:mx-16'>
       {/* Download & Socials */}
-        <div className='flex flex-col gap-10 w-[30vw]'>
+        <div className='flex flex-col gap-10 w-[full] lg:w-[30vw]'>
           <h1 className='text-3xl font-bold'>Easy <br /> <span className='text-blue-600'>ahead</span></h1>
           <p className='text-xl '>We take the work out of connection with others so you can accomplish more.</p>
           <select name="" id=" " className='px-8 py-4 border-2 border-black rounded-md'>
@@ -18,7 +18,7 @@ function Footer() {
             <option value="Hindi" >Hindi</option>
             <option value="Esponal" >Esponal</option>
           </select>
-          <div className="flex gap-10">
+          <div className="lg:flex gap-10">
             {/* { Google play icon } */}
             {/* { Apple Store icon } */}
             <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="" className="w-36"/>
