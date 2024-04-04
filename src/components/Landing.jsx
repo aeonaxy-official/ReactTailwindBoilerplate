@@ -13,11 +13,11 @@ function Landing() {
       {/* bills + toggle */}
       <div className="flex gap-4 justify-center items-center">
         <p>Billed monthly</p>
-        <label class="flex items-center cursor-pointer">
-          <div class="relative">
-            <input type="checkbox" class="hidden" />
-            <div class="toggle-switch w-10 h-5 bg-gray-300 rounded-full shadow-inner transition duration-300 ease-in-out"></div>
-            <div class="dot absolute w-5 h-5 top-0 left-5 bg-blue-600 rounded-full shadow transition duration-300 ease-in-out"></div>
+        <label className="flex items-center cursor-pointer">
+          <div className="relative">
+            <input type="checkbox" className="hidden" />
+            <div className="toggle-switch w-10 h-5 bg-gray-300 rounded-full shadow-inner transition duration-300 ease-in-out"></div>
+            <div className="dot absolute w-5 h-5 top-0 left-5 bg-blue-600 rounded-full shadow transition duration-300 ease-in-out"></div>
           </div>
         </label>
         <p>Billed annually</p>
@@ -63,6 +63,7 @@ function Landing() {
           },
         ].map((card, index) => (
           <div
+          key={index}
             className={`w-[14vw] h-auto flex flex-col gap-6 py-4 px-6 rounded-md shadow-sm ${
               index === 4 ? "bg-[#24477b] text-white" : "bg-[#f3f3f3]"
             }`}

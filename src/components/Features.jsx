@@ -67,23 +67,23 @@ function Features({ chartData}) {
       <div className="w-full rounded-md border-2 overflow-hidden mt-10">
         <h1 className="text-xl px-8 py-4 flex justify-between items-center">Core Features <MdExpandMore size={30} /></h1>
 
-        {chartData.map((column, index) => (
+        {chartData.map((row, index) => (
           <div key={index} className="flex justify-around gap-20 pl-4 my-4 items-center  border-t-2  ">
-            <p className="w-[20vw] mx-4 border-r-2 pr-2">{column.title}</p>
+            <p className="w-[20vw] mx-4 border-r-2 pr-2">{row.title}</p>
             <p className="w-[12vw] border-r-2">
-              {column.row1 !== true ? column.row1 : <FaRegCircleCheck />}
+              {row.column1 !== true ? row.column1 : <FaRegCircleCheck />}
             </p>
             <p className="w-[12vw] border-r-2">
-              {column.row2 !== true ? column.row2 : <FaRegCircleCheck />}
+              {row.column2 !== true ? row.column2 : <FaRegCircleCheck />}
             </p>
             <p className="w-[12vw] border-r-2 ">
-              {column.row3 !== true ? column.row3 : <FaRegCircleCheck />}
+              {row.column3 !== true ? row.column3 : <FaRegCircleCheck />}
             </p>
             <p className="w-[12vw] border-r-2">
-              {column.row4 !== true ? column.row4 : <FaRegCircleCheck />}
+              {row.column4 !== true ? row.column4 : <FaRegCircleCheck />}
             </p>
             <p className="w-[12vw] ">
-              {column.row5 !== true ? column.row5 : <FaRegCircleCheck />}
+              {row.column5 !== true ? row.column5 : <FaRegCircleCheck />}
             </p>
           </div>
         ))}
