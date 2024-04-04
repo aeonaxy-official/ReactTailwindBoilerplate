@@ -68,7 +68,7 @@ function Features({ chartData}) {
         <h1 className="text-xl px-8 py-4 flex justify-between items-center">Core Features <MdExpandMore size={30} /></h1>
 
         {chartData.map((column, index) => (
-          <div key={index} className="flex justify-around gap-20 pl-4 my-4 items-center  border-t-2 border-l-2 ">
+          <div key={index} className="flex justify-around gap-20 pl-4 my-4 items-center  border-t-2  ">
             <p className="w-[20vw] mx-4 border-r-2 pr-2">{column.title}</p>
             <p className="w-[12vw] border-r-2">
               {column.row1 !== true ? column.row1 : <FaRegCircleCheck />}

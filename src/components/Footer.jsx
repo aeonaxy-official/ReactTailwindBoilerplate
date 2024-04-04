@@ -27,11 +27,11 @@ function Footer() {
           </div>
           <div className="flex gap-6">
             {/* Other social icons */}
-            <FaTwitter size={50}/>
-            <FaFacebookF size={50} />
-            <FaInstagram size={50} />
-            <FaLinkedinIn size={50} />
-            <FiYoutube size={50} />
+            <FaTwitter size={30}/>
+            <FaFacebookF size={30} />
+            <FaInstagram size={30} />
+            <FaLinkedinIn size={30} />
+            <FiYoutube size={30} />
             
             
           </div>

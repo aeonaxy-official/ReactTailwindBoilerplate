@@ -12,13 +12,13 @@ import chartData from "./Data";
 function App() {
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
       {/* <DemoComponent /> */}
-      {/* <Landing /> */}
+      <Landing />
       <Features chartData={chartData}/>
-      {/* <FAQ /> */}
-      {/* <BlueSection /> */}
-      {/* <Footer /> */}
+      <FAQ />
+      <BlueSection />
+      <Footer />
 
     </div>
   );
