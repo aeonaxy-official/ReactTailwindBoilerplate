@@ -5,8 +5,8 @@ function Features({ chartData}) {
   return (
     <div className="p-10">
       {/* Minimized Cards */}
-      <div className="flex gap-2 justify-around mt-14">
-        <div className=" w-[20vw] p-4">
+      <div className="lg:flex gap-2 justify-around mt-14">
+        <div className="lg:w-[20vw] p-4">
           <p className=" uppercase text-xl fonst-semibold">Features</p>
           <h2 className="text-3xl font-semibold">Features by plan</h2>
           <p className="text-md">
@@ -43,7 +43,7 @@ function Features({ chartData}) {
         ].map((card, index) => (
           <div
             key={index}
-            className="w-[12vw] flex flex-col gap-2 shadow-sm border-2 p-4 rounded-md "
+            className="lg:w-[12vw] flex flex-col gap-2 shadow-sm border-2 p-4 rounded-md "
           >
             <p className="text-center capitalize font-semibold">
               {card.heading}
@@ -64,13 +64,13 @@ function Features({ chartData}) {
         ))}
       </div>
       {/* Grid data */}
-      <div className="w-full rounded-md border-2 overflow-hidden mt-10">
+      <div className="hidden lg:flex flex-col w-full rounded-md border-2 overflow-hidden mt-10">
         <h1 className="text-xl px-8 py-4 flex justify-between items-center">Core Features <MdExpandMore size={30} /></h1>
 
         {chartData.map((row, index) => (
           <div key={index} className="flex justify-around gap-20 pl-4 my-4 items-center  border-t-2  ">
             <p className="w-[20vw] mx-4 border-r-2 pr-2">{row.title}</p>
-            <p className="w-[12vw] border-r-2">
+            <p className="lg:w-[12vw] border-r-2">
               {row.column1 !== true ? row.column1 : <FaRegCircleCheck />}
             </p>
             <p className="w-[12vw] border-r-2">

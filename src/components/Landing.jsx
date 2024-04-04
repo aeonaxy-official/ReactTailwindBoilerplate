@@ -4,14 +4,14 @@ function Landing() {
   return (
     <div className="w-full overflow-x-hidden my-10">
       {/* Heading */}
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center lg:items-center">
         <h1 className="text-5xl font-semibold">Scheduling should be easy.</h1>
         <h1 className="text-5xl font-semibold my-4 text-blue-600">
           Start free.
         </h1>
       </div>
       {/* bills + toggle */}
-      <div className="flex gap-4 justify-center items-center">
+      <div className="flex lg:gap-4 justify-center items-center">
         <p>Billed monthly</p>
         <label className="flex items-center cursor-pointer">
           <div className="relative">
@@ -26,7 +26,7 @@ function Landing() {
         </p>
       </div>
       {/* Maximixed Cards */}
-      <div className="overflow-x-scroll w-[100vw] flex justify-around mt-14 px-4">
+      <div className="w-[100vw] lg:flex lg:justify-around mt-14 px-4">
         {[
           {
             heading: "BAsic",
@@ -64,21 +64,21 @@ function Landing() {
         ].map((card, index) => (
           <div
           key={index}
-            className={`min-w-[12vw] max-w-[18vw] h-auto flex flex-col gap-6 py-4 px-6 rounded-md shadow-sm ${
+            className={`lg:min-w-[12vw] lg:max-w-[18vw] flex flex-col gap-6 py-4 px-6 rounded-md shadow-sm ${
               index === 4 ? "bg-[#24477b] text-white" : "bg-[#f3f3f3]"
             }`}
           >
             {index === 2 && <p className="bg-[#ffffff] text-sm capitalize rounded-md  px-2 mr-auto">most popolar</p>}
-            <p className=" uppercase text-[2vw]">{card.heading}</p>
-            <p className="text-[3vw] font-semibold">
+            <p className=" uppercase text-2xl">{card.heading}</p>
+            <p className="text-3xl font-semibold">
               {card.Pricing}
               {index !== 0 && index !== 4 && (
-                <span className="text-[1vw]">/seat/mo</span>
+                <span className="text-xl">/seat/mo</span>
               )}
             </p>
-            <p className="text-[1vw] mt-auto">{card.details}</p>
+            <p className="text-xl mt-auto">{card.details}</p>
             <p
-              className={`mt-auto rounded-md  text-center p-2  text-[1.2vw] ${
+              className={`mt-auto rounded-md  text-center p-2  text-xl ${
                 index === 2
                   ? "text-white bg-blue-600"
                   : "text-blue-600 border-2 border-blue-600"
