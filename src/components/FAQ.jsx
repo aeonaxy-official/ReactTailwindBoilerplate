@@ -1,4 +1,5 @@
 import React from 'react'
+import { MdExpandMore } from "react-icons/md";
 
 function FAQ() {
   return (
@@ -13,8 +14,8 @@ function FAQ() {
                 [
                     "What happens at the end of my trial?", "Can we try Calendly with multiple users?", "What does the renewal process look like?", "How do i upgrade or downgrade?", "We're a non-profit organization, is there special pricing available?", "What payment method do you accept?"
                 ].map((ques)=>(
-                    <div className=' border-2 rounded-md p-4'>
-                         <p className='text-3xl font-semibold text-[#232952]'>{ques}</p> {/* plus icon here*/}
+                    <div className='flex justify-between border-2 rounded-md p-4'>
+                         <p className='text-3xl font-semibold text-[#232952]'>{ques}</p> {/* plus icon here*/} <MdExpandMore size={30} />
                     </div>
                 ))
             }
