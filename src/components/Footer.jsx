@@ -10,10 +10,10 @@ function Footer() {
     <div className="lg:px-10 px-4">
       <div className='lg:flex gap-8 justify-around my-16 lg:mx-16'>
       {/* Download & Socials */}
-        <div className='flex flex-col gap-10 w-[full] lg:w-[30vw]'>
+        <div className='flex flex-col  gap-10 w-[full] lg:w-[30vw]'>
           <h1 className='text-3xl font-bold'>Easy <br /> <span className='text-blue-600'>ahead</span></h1>
           <p className='text-xl '>We take the work out of connection with others so you can accomplish more.</p>
-          <select name="" id=" " className='px-8 py-4 border-2 border-black rounded-md'>
+          <select name="" id=" " className='px-6 py-4 border-2 border-black rounded-md'>
             <option value="English" >English</option>
             <option value="Hindi" >Hindi</option>
             <option value="Esponal" >Esponal</option>
@@ -35,7 +35,6 @@ function Footer() {
             
             
           </div>
-          <p className='text-zinc-800/50'>Copyright Calendly 2022</p>
         </div>
         {/* Section 1 */}
         <div className='flex flex-col gap-8'>
@@ -87,8 +86,9 @@ function Footer() {
         </div>
           
     </div>
-      <div className="h-full w-full flex mb-10">
-            <p className="text-zinc-800/50 ml-auto">Privacy / Terms & Conditions </p>
+      <div className="h-full w-full flex mb-10 justify-between">
+          <p className='text-zinc-800/50'>Copyright Calendly 2022</p>
+            <p className="text-zinc-800/50 ">Privacy / Terms & Conditions </p>
           </div>
     </div>
   )

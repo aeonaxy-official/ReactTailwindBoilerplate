@@ -2,7 +2,7 @@ import React from "react";
 
 function Landing() {
   return (
-    <div className="w-full overflow-x-hidden my-10">
+    <div className="w-full overflow-x-hidden my-10 p-2">
       {/* Heading */}
       <div className="flex flex-col justify-center lg:items-center">
         <h1 className="text-5xl font-semibold">Scheduling should be easy.</h1>
@@ -26,7 +26,7 @@ function Landing() {
         </p>
       </div>
       {/* Maximixed Cards */}
-      <div className="w-[100vw] lg:flex lg:justify-around mt-14 px-4">
+      <div className="w-[100vw] flex flex-col gap-4 lg:flex-row lg:justify-around mt-14 px-4">
         {[
           {
             heading: "BAsic",
