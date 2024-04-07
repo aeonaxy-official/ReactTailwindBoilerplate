@@ -1,10 +1,9 @@
-import DemoComponent from "./DemoComponent";
-
+import Main from "./Components/Main";
 
 function App() {
   return (
     <div>
-   <DemoComponent />
+      <Main />
     </div>
   );
 }
