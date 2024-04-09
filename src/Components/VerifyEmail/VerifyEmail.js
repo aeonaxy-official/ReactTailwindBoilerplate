@@ -1,11 +1,33 @@
+import { useState } from "react";
 import navLogo from "../../images/mail-verify.png";
 import Footer from "../Footer/Footer";
+import MobileNav from "../Navbar/MobileNav";
 import Navbar from "../Navbar/Navbar";
+import {  faNavicon, faClose} from '@fortawesome/free-solid-svg-icons';
+
 
 const VerifyEmail = () => {
+  const [toggle, setToggle] = useState(false);
+  const [navIcon , setNavIcon] = useState(faNavicon);
+  const [bottom, setBottom] = useState(500);
+
+  function hamburgerMenuHandler (){
+    console.log('Btn Clicked');
+    if(toggle) {
+      setNavIcon(faNavicon);  
+      setBottom(0);
+    }
+    else {
+      setNavIcon(faClose);
+      setBottom(500);
+    }
+    setToggle(!toggle);
+  }
+
   return (
     <>
-      <Navbar/>
+      <Navbar hamburgerMenuHandler = {hamburgerMenuHandler} navIcon = {navIcon}/>
+      <div className="lg:hidden"> <MobileNav toggle={toggle} btttom={bottom} /> </div>
       <div className="p-10"></div>
       <div className="flex flex-col gap-4 items-center p-10 text-center">
         <div className="text-3xl"> Please Verify your email... </div>

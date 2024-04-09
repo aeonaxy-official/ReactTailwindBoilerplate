@@ -93,7 +93,7 @@ const SignUp = (props) => {
 
         setMessage("Account Creation Successful!");
         setTimeout(() => {
-          navigate("/verify");
+          navigate("/");
         }, 1000);
       })
       .catch((err) => console.log(err));

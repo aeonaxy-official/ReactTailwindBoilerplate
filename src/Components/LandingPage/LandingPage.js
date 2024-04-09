@@ -7,9 +7,7 @@ import SignIn from "./SignIn/SignIn";
 const LandingPage = () => {
 
   const [ haveAccount, setHaveAccount] = useState(false);
-  
-  
-  
+    
   function accountHandler (){
      setHaveAccount(!haveAccount);
   }
@@ -17,19 +15,22 @@ const LandingPage = () => {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-5 md:min-h-screen">
-        <div className="flex flex-col bg-yellow-200 gap-5">
-          <div className="w-[70%] m-auto text-2xl">
-            <img src={companyLogo} className="bg-yellow-200" />
+      <div >
+
+      </div>
+      <div className="border grid grid-cols-1 lg:grid-cols-3 lg:gap-10 md:min-h-screen ">
+        <div className="flex flex-col bg-yellow-200 gap-10  md:gap-5 p-10">
+          <div className=" text-2xl w-[100%] m-auto w-[80%] lg:w-[100%] m-auto">
+            <img src={companyLogo} className="bg-yellow-200 w-[30%] " />
           </div>
-          <div className="text-[#C08B5C]">
-            <div className="w-[70%] m-auto text-2xl font-bold">Discover the World's top Designers & Creatives.</div>
+          <div className="text-[#994D1C] w-[90%] m-auto ">
+            <div className="text-2xl font-bold  w-[100%]">Discover the World's top Designers & Creatives.</div>
           </div>
-          <div className="w-[80%] m-auto">
-            <img src={logo} className="w-[100%]"></img>
+          <div className="w-[80%] lg:w-[100%] m-auto">
+            <img src={logo} className="w-[90%] lg:w-[100%]"></img>
           </div>
         </div>
-        <div className="px-20 col-span-2">
+        <div className="col-span-2">
           {
             !haveAccount  && <SignUp manageAccount = {accountHandler}/>
           }

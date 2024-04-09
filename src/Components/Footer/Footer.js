@@ -12,13 +12,15 @@ const Footer = ()=>{
 
     return (
         <>
-            <div className='grid grid-cols-6 p-5 pt-20 pb-10 gap-4 justify-items-center bg-gray-100 '>
-                <div className='flex flex-col gap-5 px-2' >
-                    <div className='flex flex-col w-[70%]' >
+            <div className='grid lg:grid-cols-6 p-5 pt-20 pb-10 gap-4 justify-items-center bg-gray-100 '>
+                <div className='flex flex-col gap-5 px-2 justify-center items-center mb-4 lg:justify-start lg:items-start' >
+                    <div className='flex flex-col w-[70%] ' >
                         <img src={logo} className='w-[80%] '/>
                     </div>
-                    <div className='px-5'>
-                        Dribble is the world's leading community for  creatives to share, grow, and get hired.
+                    <div className='px-5 m-auto text-center sm:text-start sm:m-0'>
+                        <div>
+                            Dribble is the world's leading community for  creatives to share, grow, and get hired.
+                        </div>
                     </div>
 
                     <div className='flex gap-3 px-5'> 
@@ -29,7 +31,7 @@ const Footer = ()=>{
                         <div><FontAwesomeIcon icon={faPinterest} /></div>
                     </div>
                 </div>
-                <div className='flex flex-col gap-3 px-2'>
+                <div className='flex flex-col gap-3 px-2 justify-center items-center lg:justify-start lg:items-start'>
                     <div className='text-lg font-bold' >For designers</div>       
                     <div>Go Pro!</div>
                     <div>Explore Design Work </div>
@@ -40,8 +42,8 @@ const Footer = ()=>{
                     <div>Refer a Friend</div>
                     <div>Code of Conduct</div>
                 </div>
-                <div className='flex flex-col gap-5 px-2 :flex-row'>
-                    <div className='flex flex-col gap-3 px-2 '>
+                <div className='flex flex-col gap-5 px-2 :flex-row justify-center items-center lg:justify-start lg:items-start'>
+                    <div className='flex flex-col gap-3 px-2 justify-center items-center lg:justify-start lg:items-start'>
 
                         <div className='text-lg font-bold'>Hire Designers</div>
                         <div>Post a Job opening</div>
@@ -49,14 +51,14 @@ const Footer = ()=>{
                         <div>Search for designers</div>
 
                     </div>
-                    <div className='flex flex-col gap-3 px-2 '>
+                    <div className='flex flex-col gap-3 px-2 justify-center items-center lg:justify-start lg:items-start'>
                         <div className='text-lg font-bold'>Brands</div>
                         <div>Advertise with us</div>
 
                     </div>
 
                 </div>
-                <div className='flex flex-col gap-3 px-2'>
+                <div className='flex flex-col gap-3 px-2 justify-center items-center lg:justify-start lg:items-start'>
                     <div className='text-lg font-bold' > Company</div>
                     <div> About</div>
                     <div> Careers</div>
@@ -69,8 +71,8 @@ const Footer = ()=>{
                     <div> Cookie Policy </div>
 
                 </div>
-                <div className='flex flex-col gap-5 px-2 :flex-row'>
-                    <div  className='flex flex-col gap-3 px-2'>
+                <div className='flex flex-col gap-5 px-2 :flex-row '>
+                    <div  className='flex flex-col gap-3 px-2 justify-center items-center lg:justify-start lg:items-start'>
                         <div className='text-lg font-bold' > Directories</div>
                         <div> Design jobs</div>
                         <div> Designers for hire</div>
@@ -79,7 +81,7 @@ const Footer = ()=>{
                         <div> Places</div>
 
                     </div>
-                    <div  className='flex flex-col gap-3 px-2' >
+                    <div  className='flex flex-col gap-3 px-2 justify-center items-center lg:justify-start lg:items-start' >
                         <div className='text-lg font-bold' > Design assets</div>
                         <div> Dribble Marketplace</div>
                         <div> Creative Market</div>
@@ -89,8 +91,7 @@ const Footer = ()=>{
                     </div>
 
                 </div>
-                <div className='flex flex-col gap-3 px-2'>   
-
+                <div className='flex flex-col gap-3 px-2 justify-center items-center lg:justify-start lg:items-start'>   
                     <div className='text-lg font-bold' > Design Resources</div>
                     <div> Freelancing</div>
                     <div> Design Hiring</div>
@@ -98,8 +99,6 @@ const Footer = ()=>{
                     <div> Design Education</div>
                     <div> Creative Process</div>
                     <div> Design Industry Trends</div>
-
-
                 </div>
             </div>
         </>

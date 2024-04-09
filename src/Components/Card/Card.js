@@ -7,7 +7,7 @@ import CardStyle from "./Card.module.css";
 const Card = (props) => {
   return (
     <>
-      <div className="border hover:border-4 flex flex-col p-5 w-[310px] h-[330px] rounded-xl  cursor-pointer group hover:border-[#F7418F] transition-all duration-200 z-12">
+      <div className="border border hover:border-4 flex flex-col p-5 w-[310px] h-[330px] rounded-xl  cursor-pointer group hover:border-[#F7418F] transition-all duration-200 z-12">
         <div className="flex flex-col gap-5 relative transition-transform group-hover:-translate-y-32 z-0">
           <div className="w-[100%] h-[10rem] m-auto ">
             <img src={props.image} className="w-[100%] h-[100%]" />

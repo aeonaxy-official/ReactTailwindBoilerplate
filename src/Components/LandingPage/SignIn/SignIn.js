@@ -5,14 +5,19 @@ const SignIn = (props) => {
   let navigate = useNavigate();
   const [message , setMessage] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [wrongPassword, setWrongPassword] = useState(false);
   const [password , setPassword ] = useState('');
   const [credential, setCredential] = useState('');
 
   const passwordHandler = (e)=>{
     setPassword(e.target.value);
+    setWrongPassword(false);
+    setMessage('');
   }
   const credentialHandler = (e)=>{
     setCredential(e.target.value);
+    setWrongPassword(false);
+    setMessage('');
   }
 
   const onSubmitHandler = (e)=>{
@@ -31,10 +36,12 @@ const SignIn = (props) => {
     }).then((res) => {
 
         if (res.status !== 200 && res.status !== 201) {
-          throw new Error("Can't update status!");
+          setMessage('Wrong Password!');
+          setWrongPassword(true);
+          throw new Error("Wrong Password");
         }
         return res.json({
-          message: "post failed!",
+          message: "Wrong Pass!",
         });
       })
       .then((resData) => {
@@ -42,7 +49,7 @@ const SignIn = (props) => {
           setMessage(resData.message);
           setIsLoggedIn(true);
           setTimeout(()=>{
-            navigate("/verify");
+            navigate("/welcome");
           }, 1000);
 
       })
@@ -59,7 +66,7 @@ const SignIn = (props) => {
         </div>
         <div className="flex flex-col gap-5 pb-12 transition-all">
            <div className="text-2xl font-bold">Sign In to Dribble</div>
-           <div> <h4 className="text-green-500 font-bold"> {message} </h4></div>
+           <div> <h4 className={`${wrongPassword ? 'text-red-500' : 'text-green-500'} font-normal`}> {message} </h4></div>
         </div>
         <form className="transition-all" onSubmit={onSubmitHandler}>
            
