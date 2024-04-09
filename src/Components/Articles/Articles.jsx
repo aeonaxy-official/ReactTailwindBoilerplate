@@ -182,7 +182,7 @@ const Articles = () => {
                                     <p className='text-[16px] w-[80%] text-white'>Interviews and deep dives with the experts behind the biggest apps in the world.</p>
                                 </div>
                             </div>
-                            <div className='flex justify-center items-center w-1/2 md:w-[55%] xl:w-[35%] rounded-full space-x-2 py-2 mx-4   bg-[#f3ea71]'>
+                            <div className='flex justify-center items-center w-1/2 md:w-[55%] xl:w-[35%] rounded-full space-x-2 py-2 mx-4 mt-8 lg:mt-0  bg-[#f3ea71]'>
                                 <div className='rounded-full w-8 h-8 bg-black flex items-center justify-center '>
                                     <FontAwesomeIcon className='text-white ' icon={faPlay} />
                                 </div>
