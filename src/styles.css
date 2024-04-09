@@ -2,3 +2,36 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+<<<<<<< HEAD
+=======
+
+body{
+  font-family: sans-serif;
+}
+@media only screen and (max-width: 624px) {
+  .notification {
+    font-size: 0.4rem;
+    gap: 0.4rem;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .notification button {
+    font-size: 0.4rem !important;
+  }
+}
+
+@media only screen and (min-width: 624px) {
+  .notification {
+    font-size: 0.8rem;
+    gap: 4rem !important;
+  }
+  .notification button {
+    font-size: 0.7rem;
+  }
+}
+
+.dark{
+  background-color: rgb(17 24 39)  !important;
+}
+>>>>>>> origin/master
