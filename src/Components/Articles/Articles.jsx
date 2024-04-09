@@ -37,7 +37,7 @@ const Articles = () => {
                         <div className='flex flex-col space-y-8 justify-between'>
                             <div>
                                 <div className=''>
-                                    <img className='object-cover rounded-t-xl w-full h-[350px]' src={Company} />
+                                    <img className='object-cover rounded-t-xl w-full h-[350px]' alt="" src={Company} />
                                 </div>
                                 <div className='w-1/2 sm:w-[40%] lg:w-1/2 xl:w-1/3 mt-2 px-4'>
                                     <p className='rounded-full text-sm py-1 font-medium text-[#e26160] border-2 border-[#e26160] text-center'>Company</p>
@@ -51,7 +51,7 @@ const Articles = () => {
                             </div>
                             <div className='flex items-center space-x-2 py-4  px-4'>
                                 <div className=''>
-                                    <img className='h-10 w-10 object-cover rounded-full' src={User} />
+                                    <img className='h-10 w-10 object-cover rounded-full' alt="" src={User} />
                                 </div>
                                 <div className='flex flex-col'>
                                 <p className='text-black font-bold text-sm'>Will Taylor</p>
@@ -64,7 +64,7 @@ const Articles = () => {
                         <div className='flex flex-col md:space-y-8 lg:space-y-[58px] xl:space-y-8 justify-between'>
                             <div>
                                 <div className=''>
-                                    <img className='object-cover rounded-t-xl w-full h-[350px]' src={Growth} />
+                                    <img className='object-cover rounded-t-xl w-full h-[350px]' alt="" src={Growth} />
                                 </div>
                                 <div className='w-1/2 sm:w-[40%] lg:w-1/2 xl:w-1/3 mt-2 px-4'>
                                     <p className='rounded-full text-sm py-1 font-medium text-[#60dba9] border-2 border-[#60dba9] text-center'>Growth</p>
@@ -78,7 +78,7 @@ const Articles = () => {
                             </div>
                             <div className='flex items-center space-x-2 py-4  px-4'>
                                 <div className=''>
-                                    <img className='h-10 w-10 object-cover  rounded-full' src={User} />
+                                    <img className='h-10 w-10 object-cover  rounded-full' alt="" src={User} />
                                 </div>
                                 <div className='flex flex-col'>
                                 <p className='text-black font-bold text-sm'>Thomas Kreibernegg</p>
@@ -91,7 +91,7 @@ const Articles = () => {
                         <div className='flex flex-col md:space-y-20 lg:space-y-[58px] xl:space-y-8 justify-between'>
                             <div>
                                 <div className=''>
-                                    <img className='object-cover rounded-t-xl w-full h-[350px]' src={Engineering} />
+                                    <img className='object-cover rounded-t-xl w-full h-[350px]' alt="" src={Engineering} />
                                 </div>
                                 <div className='w-1/2 sm:w-[40%] lg:w-1/2 xl:w-1/3 mt-2 px-4'>
                                     <p className='rounded-full text-sm py-1 font-medium text-[#596ccb] border-2 border-[#596ccb] text-center'>Engineering</p>
@@ -105,7 +105,7 @@ const Articles = () => {
                             </div>
                             <div className='flex items-center space-x-2 py-4  px-4'>
                                 <div className=''>
-                                    <img className='h-10 w-10 object-cover rounded-full' src={User} />
+                                    <img className='h-10 w-10 object-cover rounded-full' alt="" src={User} />
                                 </div>
                                 <div className='flex flex-col'>
                                 <p className='text-black font-bold text-sm'>Corey Rabazinski</p>
@@ -118,7 +118,7 @@ const Articles = () => {
                         <div className='flex flex-col md:space-y-[85px] lg:space-y-[58px] xl:space-y-8 justify-between'>
                             <div>
                                 <div className=''>
-                                    <img className='object-cover rounded-t-xl w-full h-[350px]' src={Computers} />
+                                    <img className='object-cover rounded-t-xl w-full h-[350px]' alt="" src={Computers} />
                                 </div>
                                 <div className='w-1/2 sm:w-[40%] lg:w-1/2 xl:w-1/3 mt-2 px-4'>
                                 <p className='rounded-full text-sm py-1 font-medium text-[#e26160] border-2 border-[#e26160] text-center'>Company</p>
@@ -132,7 +132,7 @@ const Articles = () => {
                             </div>
                             <div className='flex items-center space-x-2 py-4  px-4'>
                                 <div className=''>
-                                    <img className='h-10 w-10 object-cover rounded-full' src={User} />
+                                    <img className='h-10 w-10 object-cover rounded-full' alt="" src={User} />
                                 </div>
                                 <div className='flex flex-col'>
                                 <p className='text-black font-bold text-sm'>Rachel Wright</p>
@@ -145,7 +145,7 @@ const Articles = () => {
                         <div className='flex flex-col space-y-16 justify-between'>
                             <div>
                                 <div className=''>
-                                    <img className='object-cover rounded-t-xl w-full h-[350px]' src={Google} />
+                                    <img className='object-cover rounded-t-xl w-full h-[350px]' alt="" src={Google} />
                                 </div>
                                 <div className='w-1/2 sm:w-[40%] lg:w-1/2 xl:w-1/3 mt-2 px-4'>
                                 <p className='rounded-full text-sm py-1 font-medium text-[#596ccb] border-2 border-[#596ccb] text-center'>Engineering</p>
@@ -159,7 +159,7 @@ const Articles = () => {
                             </div>
                             <div className='flex items-center space-x-2 py-4  px-4'>
                                 <div className=''>
-                                    <img className='h-10 w-10 object-cover rounded-full' src={User} />
+                                    <img className='h-10 w-10 object-cover rounded-full' alt="" src={User} />
                                 </div>
                                 <div className='flex flex-col'>
                                 <p className='text-black font-bold text-sm'>Thomas Petit</p>
@@ -172,7 +172,7 @@ const Articles = () => {
                         <div className='flex flex-col md:space-y-[88px] lg:space-y-[74px] justify-between'>
                             <div>
                                 <div className=''>
-                                    <img className='object-cover rounded-t-xl w-full h-[350px]' src={Gaming} />
+                                    <img className='object-cover rounded-t-xl w-full h-[350px]' alt="" src={Gaming} />
                                 </div>
                                
                                 <div className='px-4 mt-2'>
@@ -191,11 +191,7 @@ const Articles = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 mt-5 mx-5 md:mx-10'>
-                   
-                   
-                </div> */}
-
+                
                 
         </div>
     </>

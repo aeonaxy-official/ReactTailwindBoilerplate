@@ -12,7 +12,7 @@ const Header = () => {
         <div className='max-w-[1440px] mx-auto bg-white md:mt-10 z-0'>
             <div className='flex flex-col lg:flex lg:flex-row  gap-8 w-full  '>
               <div className='mx-10 lg:mx-0 lg:ml-12  lg:w-[50%]'>
-                <img className='rounded-xl  w-auto h-auto lg:w-full lg:h-[380px] bg-cover' src={ImageOne}/>
+                <img className='rounded-xl  w-auto h-auto lg:w-full lg:h-[380px] bg-cover' alt="" src={ImageOne}/>
               </div>
               <div className='flex flex-col justify-between lg:w-[50%] '>
                 <div className='flex- flex-col'>
@@ -26,7 +26,7 @@ const Header = () => {
                 </div>
                 <div className='flex items-center space-x-2 mx-10 lg:mx-0 mt-10'>
                     <div className=''>
-                      <img className='h-10 w-10  rounded-full' src={User} />
+                      <img className='h-10 w-10  rounded-full' alt="" src={User} />
                     </div>
                     <div className='flex flex-col'>
                       <p className='text-black font-bold text-sm'>Thomas Petit</p>

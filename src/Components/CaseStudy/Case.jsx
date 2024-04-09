@@ -17,7 +17,7 @@ const Case = () => {
                         <p className='text-white text-xl w-4/5'>"At any level og Scale RevenueCat just works"</p>
                         <div className='flex items-center space-x-4'>
                             <div className=''>
-                                <img className='h-10 w-10 object-cover rounded-full' src={User} />
+                                <img className='h-10 w-10 object-cover rounded-full' alt="" src={User} />
                             </div>
                             <p className='text-sm text-white'>David Smith, Widgetsmith</p>
                         </div>

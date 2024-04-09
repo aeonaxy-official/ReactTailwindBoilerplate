@@ -20,7 +20,7 @@ const Navbar = () => {
      <div className='max-w-[1440px] hidden lg:flex justify-center items-center mx-auto bg-white '>
             <div className='w-full flex justify-evenly items-center lg:space-x-20 xl:space-x-52'>
                 <div>
-                    <img src={Logo} className='w-24 h-auto'  alt='logo' />
+                    <img src={Logo} className='w-24 h-auto' alt=""  />
                 </div>
                 <ul className='flex items-center lg:gap-8 xl:gap-16'>
                     <li className='flex items-center lg:space-x-2 xl:space-x-3'>
@@ -43,33 +43,13 @@ const Navbar = () => {
             </div>
     </div>
 
-    {/* <div className='relative lg:hidden'>
-
-
-    {openMenu === false?<div className="flex items-center ">
-                    <img onClick={menuClick} className='w-28 ' src={Logo}/>
-                </div>: null}
-
-
-                {openMenu ? <div className='flex flex-col  '>
-
-            <img onClick={menuClick} src={Logo} className='w-28 '  alt='logo' />
-
-         <ul className='flex flex-col bg-gray-400 bg-opacity-50 space-y-3 pl-2 mt-20 inset-0 bottom-0 z-40 fixed top-0 text-sm '>
-            <li><a href="/">Products</a></li>
-            <li><a href="/">Docs</a></li>
-            <li><a href="/">Customer</a></li>
-            <li><a href="/">Pricing</a></li>
-            <li><a href="/">Blog</a></li>
-          </ul>
-        </div>: null}
-    </div> */}
+    
 
 
     <div>
         <div className='flex justify-between items-center lg:hidden  relative '>
                 {openMenu === false?<div className="">
-                    <img onClick={menuClick} className='w-28 ' src={Logo}/>
+                    <img onClick={menuClick} className='w-28 ' alt="" src={Logo}/>
                    
                 </div>: null}
 
@@ -77,7 +57,7 @@ const Navbar = () => {
 
                     <div className=" ">
                     
-                    <img onClick={menuClick} className='w-28 ' src={Logo}/>
+                    <img onClick={menuClick} className='w-28 ' alt="" src={Logo}/>
                     </div>
            
                     <ul className=' flex flex-col space-y-4  text-lg text-black mt-8 pl-3'>

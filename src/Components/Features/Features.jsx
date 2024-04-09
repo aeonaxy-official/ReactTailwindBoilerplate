@@ -15,7 +15,7 @@ const Features = () => {
                         <div className='flex flex-col space-y-8 justify-between'>
                             <div>
                                 <div className=''>
-                                    <img className='object-cover rounded-t-xl w-full h-[350px]' src={Company} />
+                                    <img className='object-cover rounded-t-xl w-full h-[350px]' alt="" src={Company} />
                                 </div>
                                 <div className='w-1/2 sm:w-[40%] lg:w-1/2 xl:w-1/3 mt-2 px-4'>
                                     <p className='rounded-full text-sm py-1 font-medium text-[#e26160] border-2 border-[#e26160] text-center'>Company</p>
@@ -29,7 +29,7 @@ const Features = () => {
                             </div>
                             <div className='flex items-center space-x-2 py-4  px-4'>
                                 <div className=''>
-                                    <img className='h-10 w-10 object-cover rounded-full' src={User} />
+                                    <img className='h-10 w-10 object-cover rounded-full' alt="" src={User} />
                                 </div>
                                 <div className='flex flex-col'>
                                 <p className='text-black font-bold text-sm'>Will Taylor</p>
@@ -42,7 +42,7 @@ const Features = () => {
                         <div className='flex flex-col md:space-y-8 lg:space-y-[58px] xl:space-y-8 justify-between'>
                             <div>
                                 <div className=''>
-                                    <img className='object-cover rounded-t-xl w-full h-[350px]' src={Growth} />
+                                    <img className='object-cover rounded-t-xl w-full h-[350px]' alt="" src={Growth} />
                                 </div>
                                 <div className='w-1/2 sm:w-[40%] lg:w-1/2 xl:w-1/3 mt-2 px-4'>
                                     <p className='rounded-full text-sm py-1 font-medium text-[#60dba9] border-2 border-[#60dba9] text-center'>Growth</p>
@@ -56,7 +56,7 @@ const Features = () => {
                             </div>
                             <div className='flex items-center space-x-2 py-4  px-4'>
                                 <div className=''>
-                                    <img className='h-10 w-10 object-cover  rounded-full' src={User} />
+                                    <img className='h-10 w-10 object-cover  rounded-full' alt="" src={User} />
                                 </div>
                                 <div className='flex flex-col'>
                                 <p className='text-black font-bold text-sm'>Thomas Kreibernegg</p>
@@ -69,7 +69,7 @@ const Features = () => {
                         <div className='flex flex-col lg:space-y-[58px] xl:space-y-8 justify-between'>
                             <div>
                                 <div className=''>
-                                    <img className='object-cover rounded-t-xl w-full h-[350px]' src={Engineering} />
+                                    <img className='object-cover rounded-t-xl w-full h-[350px]' alt="" src={Engineering} />
                                 </div>
                                 <div className='w-1/2 sm:w-[40%] lg:w-1/2 xl:w-1/3 mt-2 px-4'>
                                     <p className='rounded-full text-sm py-1 font-medium text-[#596ccb] border-2 border-[#596ccb] text-center'>Engineering</p>
@@ -83,7 +83,7 @@ const Features = () => {
                             </div>
                             <div className='flex items-center space-x-2 py-4  px-4'>
                                 <div className=''>
-                                    <img className='h-10 w-10 object-cover rounded-full' src={User} />
+                                    <img className='h-10 w-10 object-cover rounded-full' alt="" src={User} />
                                 </div>
                                 <div className='flex flex-col'>
                                 <p className='text-black font-bold text-sm'>Corey Rabazinski</p>

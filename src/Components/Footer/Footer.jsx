@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className='flex space-x-8 items-center lg:flex lg:flex-col lg:space-y-20 lg:items-start'>
        
                    <div className='lg:ml-3'>
-                    <img src={Logo} className='w-44 h-auto'  alt='logo' />
+                    <img src={Logo} alt="" className='w-44 h-auto'   />
                    </div>
                 
                     <div className='flex flex-col  space-y-4'>
