@@ -5,7 +5,6 @@ import SelectOptions from "./Components/SelectOptions/SelectOptions";
 import Greetings from "./Components/Welcome/Greetings";
 import { useSelector } from "react-redux";
 import { Navigate} from "react-router-dom";
-import DemoComponent from "./DemoComponent";
 
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -22,8 +21,7 @@ function App() {
           <Route path="/welcome" element={<Greetings />} />
           <Route path="/verify" element={<VerifyEmail />} />
           <Route path="/select_options" element={<SelectOptions />} />
-          <Route path="/demo" element={<DemoComponent />} />
-        
+
         </Routes>
       </div>
     </>
