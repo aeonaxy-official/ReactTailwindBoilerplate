@@ -5,6 +5,7 @@ import option3 from "../../images/option3.png";
 import CardStyle from "./Card.module.css";
 
 const Card = (props) => {
+
   return (
     <>
       <div className="border border hover:border-4 flex flex-col p-5 w-[310px] h-[330px] rounded-xl  cursor-pointer group hover:border-[#F7418F] transition-all duration-200 z-12">
@@ -19,7 +20,7 @@ const Card = (props) => {
         </div>
         <div className="flex justify-center p-3 relative group-hover:bottom-28 ">
           <label className={`${CardStyle.container} `}>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={props.onCheckboxChange} />
             <span className={CardStyle.checkmark}></span>
           </label>
         </div>

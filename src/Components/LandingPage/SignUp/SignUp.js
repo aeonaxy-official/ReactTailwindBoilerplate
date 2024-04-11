@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { faWarning } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -11,14 +11,14 @@ const SignUp = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [checkBox , setCheckbox] = useState(false);
   const [usernameTaken , setUsernameTaken] = useState(false);
 
   useEffect(() => {
     // check username is already is already taken or not
-    // fetch()
-
+  
    const Timer =  setTimeout(()=>{
-    fetch("http://localhost:8080/auth/valid_username",{
+    fetch(`${process.env.REACT_APP_API_URL}auth/valid_username`,{
       method : 'POST',
       headers : {
         "Content-Type": "application/json",
@@ -27,10 +27,12 @@ const SignUp = (props) => {
         username : username
       })
     }).then((res) => {
+      console.log(res);
       
       return res.json();
 
     }).then((resData)=>{
+      console.log(resData);
       if(resData.isUsernameTaken === true){
          setMessage(resData.message);
          setUsernameTaken(true);
@@ -44,7 +46,7 @@ const SignUp = (props) => {
 
     }, 300);
     return ()=>{
-      console.log('running')
+      console.log('running');
       clearTimeout(Timer);
       
     }
@@ -64,11 +66,15 @@ const SignUp = (props) => {
   const passwordHandler = (e) => {
     setPassword(e.target.value);
   };
+  const checkBoxHandler = (e)=>{
+    console.log(e.target.checked);
+    setCheckbox(e.target.checked);
+  }
 
   const submitHandler = (e) => {
     e.preventDefault();
     // navigate('/auth/signin');
-    fetch("http://localhost:8080/auth/signup", {
+    fetch(`${process.env.REACT_APP_API_URL}auth/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -93,7 +99,13 @@ const SignUp = (props) => {
 
         setMessage("Account Creation Successful!");
         setTimeout(() => {
-          navigate("/");
+          // navigate("/");
+          setEmail('');
+          setName('');
+          setPassword('');
+          setUsername('');
+          setCheckbox((prevState)=> !prevState);
+        
         }, 1000);
       })
       .catch((err) => console.log(err));
@@ -105,9 +117,9 @@ const SignUp = (props) => {
         <div className="flex justify-end gap-4 pb-5">
           <div>Already a member? </div>
           <div>
-            <a href="#" className="text-blue-500" onClick={props.manageAccount}>
+            <Link to="#" className="text-blue-500" onClick={props.manageAccount}>
               SignIn
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col gap-5 pb-10">
@@ -120,18 +132,19 @@ const SignUp = (props) => {
         <form onSubmit={submitHandler}>
           <div className="grid grid-cols-2 gap-5">
             <div className="flex flex-col">
-              <label for="name" className="font-bold"> Name </label>
+              <label htmlFor="name" className="font-bold"> Name </label>
               <input
                 type="text"
                 name="name"
                 id="name"
                 className="px-2 rounded h-[2.5rem] bg-gray-200 outline-none"
+                value={name}
                 required
                 onChange={nameHandler}
               />
             </div>
             <div className="flex flex-col">
-              <label for="username" className="block font-bold" >
+              <label htmlFor="username" className="block font-bold" >
                 {usernameTaken ? <FontAwesomeIcon icon={faWarning} className="text-red-500"/>: ''} Username{" "}
               </label>
               <input
@@ -139,29 +152,32 @@ const SignUp = (props) => {
                 name="username"
                 id="username"
                 className={`px-2 rounded h-[2.5rem] bg-gray-200 outline-none ${usernameTaken ? 'bg-red-200' : ''}`}
+                value={username}
                 required
                 onChange={usernameHandler}
               />
             </div>
           </div>
           <div className="my-5 flex flex-col">
-            <label for="email" className="font-bold"> Email </label>
+            <label htmlFor="email" className="font-bold"> Email </label>
             <input
               type="email"
               name="email"
               id="email"
               className="px-2 rounded h-[2.5rem] bg-gray-200 outline-none "
+              value={email}
               required
               onChange={emailHandler}
             />
           </div>
           <div className="my-5 flex flex-col">
-            <label for="password" className="font-bold"> Password </label>
+            <label htmlFor="password" className="font-bold"> Password </label>
             <input
               type="password"
               name="password"
               id="password"
               className="px-2 rounded h-[2.5rem] bg-gray-200 outline-none"
+              value={password}
               required
               onChange={passwordHandler}
             />
@@ -172,9 +188,11 @@ const SignUp = (props) => {
               id="checkbox"
               name="checkbox"
               className="rounded border-none"
+              checked = {checkBox}
+              onChange={checkBoxHandler}
               required
             />
-            <label for="checkbox">
+            <label htmlFor="checkbox">
               Creating an account means you're okey with our{" "}
               <a href="#" className="text-blue-600">
                 Terms of Service, Privacy Policy,

@@ -15,9 +15,6 @@ const LandingPage = () => {
 
   return (
     <>
-      <div >
-
-      </div>
       <div className="border grid grid-cols-1 lg:grid-cols-3 lg:gap-10 md:min-h-screen ">
         <div className="flex flex-col bg-yellow-200 gap-10  md:gap-5 p-10">
           <div className=" text-2xl w-[100%] m-auto w-[80%] lg:w-[100%] m-auto">
